@@ -1,0 +1,7 @@
+.custom-bg-gradient {
+    background-image: linear-gradient(to bottom, #000, #200D42 34%, #4F21A1 65%, #A46EDB 82%);
+}
+
+.text-gradient {
+    background-image: linear-gradient(to right,#F87AFF, #FB93D0, #FFDD99, #C3F0B2, #2FD8FE);
+}
