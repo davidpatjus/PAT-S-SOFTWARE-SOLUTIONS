@@ -5,3 +5,7 @@
 .text-gradient {
     background-image: linear-gradient(to right,#F87AFF, #FB93D0, #FFDD99, #C3F0B2, #2FD8FE);
 }
+
+.circle-gradient {
+    background-image: radial-gradient(closest-side, #000 82%, #9560EB);
+}
