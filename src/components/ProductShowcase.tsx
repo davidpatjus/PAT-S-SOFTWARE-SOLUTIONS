@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import appScreen from "../assets/images/app-screen.png";
+import { motion, useScroll } from "framer-motion";
 
 export const ProductShowcase = () => {
   return (
@@ -16,11 +18,19 @@ export const ProductShowcase = () => {
           </p>
         </div>
       
-        <Image 
-          src={appScreen}
-          alt="The Product Screenshot" 
-          className="mt-14 mx-auto"
-        />
+        <motion.div
+          style={{
+            opacity: 1,
+            rotateX: 0 ,
+            transformPerspective: "800px",
+          }}
+        >
+          <Image 
+            src={appScreen}
+            alt="The Product Screenshot" 
+            className="mt-14 mx-auto"
+          />
+        </motion.div>
 
       </div>
     </div>
