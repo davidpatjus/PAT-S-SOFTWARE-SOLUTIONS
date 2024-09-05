@@ -9,3 +9,8 @@
 .circle-gradient {
     background-image: radial-gradient(closest-side, #000 82%, #9560EB);
 }
+
+.bg-rainbow-gradient {
+    background: linear-gradient(to right, #F87BFF, #FB92CF, #FFDD9B, #C2F0B1, #2FD8FE);
+  }
+

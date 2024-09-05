@@ -1,16 +1,18 @@
+import './gradients.css'
+
 export const Banner = () => {
   return (
-    <div className="py-3 text-center bg-gradient-to-r from-[#430072d7] via-[#4c0791cc] to-[#430072d7]">
+    <div className="py-3 text-center bg-rainbow-gradient">
       <div className="container">
-        <p className="font-medium text-white">
+        <p className="font-medium text-lg text-black">
           <span className="hidden sm:inline">
-            Introducing a completely redesigned interface -{" "}
+            Potencia la eficiencia en tu MARCA / NEGOCIO -{" "}
           </span>
           <a 
             href="#" 
             className="underline underline-offset-4 font-bold"
             >
-            Explore the Demo 
+            AGENDA TU CITA 
           </a>
         </p>
       </div>

@@ -6,8 +6,8 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PAT´S Software Solutions",
-  description: "PAT´S Software Solutions",
+  title: "PAT'S Software Solutions - Desarrollo Web y Aplicaciones Freelance",
+  description: "Desarrollador freelance especializado en soluciones Full-Stack con Angular, React, Next.js y más. Proyectos personalizados para tu negocio.",
 };
 
 export default function RootLayout({

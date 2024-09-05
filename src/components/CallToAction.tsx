@@ -1,22 +1,48 @@
+'use client'
 import helixImage from '../assets/images/helix2.png';
 import emojiStarImage from '../assets/images/emojistar.png';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export const CallToAction = () => {
-  return (
-    <div className="bg-black text-white py-[72px] sm:py-24 text-center">
-      <div className="container max-w-xl relative">
 
-        <Image 
-          src={helixImage} 
-          className='absolute hidden xl:inline top-6 left-[calc(100%+36px)]' 
-          alt='helix' 
-        />
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end end']
+  });
+
+  useEffect(() => {
+    scrollYProgress.on('change', (value) => console.log('value', value));
+  }, [scrollYProgress]);
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [40, -40])
+
+  return (
+    <div className="bg-black text-white py-[72px] sm:py-24 text-center overflow-x-clip" ref={containerRef}>
+      <div className="container max-w-lg relative">
+
+        <motion.div
+          style={{ translateY }}
+        >
+          <Image 
+            src={helixImage} 
+            className='absolute top-6 left-[calc(100%+36px)]' 
+            alt='helix' 
+          />
+        </motion.div>
+
+        <motion.div
+          style={{ translateY }}
+        >
         <Image 
           src={emojiStarImage} 
-          className='absolute hidden xl:inline -top-[120px] right-[calc(100%+24px)]' 
+          className='absolute -top-[120px] right-[calc(100%+24px)]' 
           alt='emoji star' 
         />
+        </motion.div>
 
         <h2 className="font-bold text-5xl tracking-tighter sm:text-6xl ">
           Get instant access
