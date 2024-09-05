@@ -1,59 +1,82 @@
 "use client"
 import Image from "next/image";
-import acmeLogo from "../assets/images/acme.png";
-import quantumLogo from "../assets/images/quantum.png";
-import echoLogo from "../assets/images/echo.png";
-import celestialLogo from "../assets/images/celestial.png";
-import pulseLogo from "../assets/images/pulse.png";
-import apexLogo from "../assets/images/apex.png";
-import { motion } from "framer-motion";
+import webDevIcon from "../assets/images/domain.png";
+import consultingIcon from "../assets/images/consultant-services.png";
+import mobileDevIcon from "../assets/images/app-development.png";
+import supportIcon from "../assets/images/support-services.png";
+import designIcon from "../assets/images/illustration.png";
+import seoIcon from "../assets/images/seo.png";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import './animations.css'
 
-const images = [
-  { src: acmeLogo, alt: "Acme Logo" },
-  { src: quantumLogo, alt: "Quantum Logo" },
-  { src: echoLogo, alt: "Echo Logo" },
-  { src: celestialLogo, alt: "Celestial Logo" },
-  { src: pulseLogo, alt: "Pulse Logo" },
-  { src: apexLogo, alt: "Apex Logo" },
+const services = [
+  { src: webDevIcon, alt: "Desarrollo Web", text: "Desarrollo Web" },
+  { src: consultingIcon, alt: "Consultoría Técnica", text: "Consultoría Técnica" },
+  { src: mobileDevIcon, alt: "Desarrollo Móvil", text: "Desarrollo Móvil" },
+  { src: supportIcon, alt: "Soporte Técnico", text: "Soporte Técnico" },
+  { src: designIcon, alt: "Diseño UI/UX", text: "Diseño UI/UX" },
+  { src: seoIcon, alt: "SEO y Optimización", text: "SEO y Optimización" },
 ];
 
 export const LogoTicker = () => {
+  
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({
+      translateX: "-50%",
+      transition: {
+        duration: 15,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  }, [controls]);
+
   return (
     <div className="bg-black text-white py-[72px] sm:py-24">
       <div className="container">
-        <h2 className="text-xl text-center text-white/70">
-          Trusted by the world’s most innovative teams
+        <h2 className="text-xl md:text-2xl xl:text-3xl text-center text-white/70">
+          Servicios que ofrecemos para maximizar tu éxito
         </h2>
-          <div className="flex overflow-hidden mt-9 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative   after:right-0 before:left-0 before:top-0 after:top-0 before:bg-gradient-to-r before:from-black before:to-transparent after:bg-gradient-to-l after:from-black after:to-transparent ">
-            <motion.div
-            transition={{
-              duration: 10,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-              initial={{ translateX: 0 }}
-              animate={{ translateX: "-50%" }} 
-              className="flex gap-16 flex-none pr-16"
-            >
-                {images.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    width={200}
-                    height={200}
-                    className="flex-none h-8 w-auto"
-                  />
+          <div className="flex overflow-hidden mt-9 md:mt-12 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative after:right-0 before:left-0 before:top-0 after:top-0 before:bg-gradient-to-r before:from-black before:to-transparent after:bg-gradient-to-l after:from-black after:to-transparent">
+          <motion.div
+            animate={controls}
+            onMouseEnter={() => controls.stop()}  
+            onMouseLeave={() => controls.start({
+              translateX: "-50%",
+              transition: {
+                duration: 12,
+                ease: "linear",
+                repeat: Infinity,
+              },
+            })}  // Reiniciar la animación cuando se sale del hover
+            className="flex gap-16 md:gap-20 xl:gap-24 flex-none pr-16"
+          >
+                {services.map((service, index) => (
+                  <div key={index} className="flex-none text-center service-card" aria-label={service.text}>
+                    <Image
+                      src={service.src}
+                      alt={service.alt}
+                      width={200}
+                      height={200}
+                      className="flex-none h-12 w-auto mx-auto sm:h-20 xl:h-28 invert py-1"
+                    />
+                    <p className="mt-4 text-sm md:text-lg xl:text-xl text-white/80">{service.text}</p>
+                  </div>
                 ))}
-                {images.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    width={200}
-                    height={200}
-                    className="flex-none h-8 w-auto"
-                  />
+                {services.map((service, index) => (
+                  <div key={index} className="flex-none text-center service-card" aria-label={service.text}>
+                    <Image
+                      src={service.src}
+                      alt={service.alt}
+                      width={200}
+                      height={200}
+                      className="flex-none h-12 w-auto mx-auto sm:h-20 xl:h-28 invert py-1"
+                    />
+                    <p className="mt-4 text-sm md:text-lg xl:text-xl text-white/80">{service.text}</p>
+                  </div>
                 ))}
             </motion.div>
         </div>
