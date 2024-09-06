@@ -4,6 +4,7 @@ import emojiStarImage from '../assets/images/emojistar.png';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export const CallToAction = () => {
 
@@ -21,7 +22,7 @@ export const CallToAction = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [80, -80])
 
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24 text-center overflow-x-clip" ref={containerRef}>
+    <div id='Contact' className="bg-black text-white py-[72px] sm:py-24 text-center overflow-x-clip" ref={containerRef}>
       <div className="container max-w-2xl relative">
 
         <motion.div
@@ -62,12 +63,13 @@ export const CallToAction = () => {
             required
             aria-invalid="false"
           />
-          <button 
+          <Link 
+            href='https://api.whatsapp.com/send?phone=573146200770&text=%F0%9F%91%BE%20Hi%20David%2C%20how%20are%20you%3F%20I%20am%20interested%20in%20your%20services.%20%F0%9F%91%BE%20'
             type="submit" 
-            className="bg-white text-black h-12 rounded-lg px-5"
+            className="bg-white text-black h-12 rounded-lg px-5 font-medium flex-1 sm:w-auto hover:bg-white/80 hover:text-black transition-transform hover:scale-105 py-3 "
           >
-            Get access
-          </button>
+            Contáctanos
+          </Link>
         </form>
       
       </div>

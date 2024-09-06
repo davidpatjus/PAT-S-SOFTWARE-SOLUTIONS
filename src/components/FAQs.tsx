@@ -109,7 +109,7 @@ export const FAQs = () => {
   const displayedItems = showAll ? items : items.slice(0, 4);
 
   return (
-    <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-16 sm:py-24">
+    <div id='FAQ' className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-16 sm:py-24">
       <div className="container mx-auto px-6 sm:px-8">
         
         <h2 className='text-center text-6xl sm:text-7xl font-bold tracking-tight'>

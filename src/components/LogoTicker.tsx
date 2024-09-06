@@ -35,7 +35,7 @@ export const LogoTicker = () => {
   }, [controls]);
 
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24">
+    <div id="Services" className="bg-black text-white py-[72px] sm:py-24">
       <div className="container">
         <h2 className="text-xl md:text-2xl xl:text-4xl text-center text-white/70">
           Servicios que ofrecemos para maximizar tu éxito

@@ -63,7 +63,7 @@ const plans = [
 
 export const Features = () => {
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24 overflow-x-hidden">
+    <div id="Planes" className="bg-black text-white py-[72px] sm:py-24 overflow-x-hidden">
       <div className="container">
         
         <h2 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter">

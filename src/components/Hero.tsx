@@ -5,16 +5,17 @@ import cursorImage from "../assets/images/cursor.png";
 import messageImage from "../assets/images/message.png";
 import { motion } from 'framer-motion'
 import "./gradients.css";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
     <div className="bg-black text-white custom-bg-gradient py-[72px] sm:py-24 xl:py-36 relative overflow-clip overflow-x-hidden">
-      <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] circle-gradient top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
+      <div className="absolute h-[375px] w-[1000px] sm:w-[1536px] sm:h[768px] lg:w-[3165px] lg:h-[700px] xl:h-[500px] lg:mt-8 xl:mt-4 rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] circle-gradient top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
         <div className="container relative">
 
           <div className="flex items-center justify-center">
-            <a
-              href="#"
+            <Link
+              href="#Services"
               className="text-sm sm:text-base flex sm:inline-flex gap-3 border py-1 px-2 rounded-lg border-white/30"
             >
               <span className="text-gradient text-transparent bg-clip-text [-webkit-background-clip:text]">
@@ -25,7 +26,7 @@ export const Hero = () => {
                 <span>¿como te puede beneficiar?</span>
                 <ArrowWIcon />
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="flex justify-center mt-8">
@@ -76,9 +77,14 @@ export const Hero = () => {
           </div>
 
           <div className="flex justify-center mt-8">
-          <button className="border-2 border-purple-500/70 bg-gradient-to-r from-purple-600 to-purple-500 text-white py-3 px-5 rounded-lg font-medium hover:scale-105 transition-transform">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={'https://api.whatsapp.com/send?phone=573146200770&text=%F0%9F%91%BE%20Hi%20David%2C%20how%20are%20you%3F%20I%20am%20interested%20in%20your%20services.%20%F0%9F%91%BE%20'} 
+            className="border-2 border-purple-500/70 bg-gradient-to-r from-purple-600 to-purple-500 text-white py-3 px-5 rounded-lg font-medium hover:scale-105 transition-transform"
+          >
             ¡Trabaja con Nosotros!
-          </button>
+          </Link>
           </div>
 
         </div>

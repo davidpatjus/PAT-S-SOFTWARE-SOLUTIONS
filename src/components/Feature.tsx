@@ -4,6 +4,7 @@ import PriceImage from "../assets/images/dollar.png";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import  CheckIcon  from "../assets/images/check.png"; 
 import Image from "next/image";
+import Link from "next/link";
 
 
 function Feature({
@@ -74,9 +75,12 @@ function Feature({
         ))}
       </ul>
 
-    	<button className="mt-6 bg-purple-500 text-white py-2 px-4 rounded-lg transition-transform hover:scale-105">
-      	Comprar
-    	</button>
+    	{/* <Link
+			href='https://api.whatsapp.com/send?phone=573146200770&text=%F0%9F%91%BE%20Hi%20David%2C%20how%20are%20you%3F%20I%20am%20interested%20in%20your%20services.%20%F0%9F%91%BE%20'
+			className="mt-8 bg-purple-500 text-white py-2 px-4 rounded-lg transition-transform hover:scale-105 hover:bg-purple-600"
+		>
+      		Comprar
+    	</Link> */}
     
 		</div>
   );
