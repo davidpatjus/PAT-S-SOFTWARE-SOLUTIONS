@@ -37,10 +37,10 @@ export const LogoTicker = () => {
   return (
     <div className="bg-black text-white py-[72px] sm:py-24">
       <div className="container">
-        <h2 className="text-xl md:text-2xl xl:text-3xl text-center text-white/70">
+        <h2 className="text-xl md:text-2xl xl:text-4xl text-center text-white/70">
           Servicios que ofrecemos para maximizar tu éxito
         </h2>
-          <div className="flex overflow-hidden mt-9 md:mt-12 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative after:right-0 before:left-0 before:top-0 after:top-0 before:bg-gradient-to-r before:from-black before:to-transparent after:bg-gradient-to-l after:from-black after:to-transparent">
+          <div className="flex overflow-hidden mt-9 md:mt-12 xl:mt-16 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative after:right-0 before:left-0 before:top-0 after:top-0 before:bg-gradient-to-r before:from-black before:to-transparent after:bg-gradient-to-l after:from-black after:to-transparent">
           <motion.div
             animate={controls}
             onMouseEnter={() => controls.stop()}  
@@ -52,7 +52,7 @@ export const LogoTicker = () => {
                 repeat: Infinity,
               },
             })}  // Reiniciar la animación cuando se sale del hover
-            className="flex gap-10 md:gap-20 xl:gap-24 flex-none pr-16"
+            className="flex mt-4 gap-10 md:gap-20 xl:gap-24 flex-none pr-16"
           >
                 {services.map((service, index) => (
                   <div key={index} className="flex-none text-center service-card" aria-label={service.text}>

@@ -40,15 +40,15 @@ function Feature({
 	}, [offsetX, offsetY]);
 
   return (
-    <div className="border h-max border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 relative">
+    <div className="border xl:h-max border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 relative">
       
 			<motion.div 
-      className="absolute inset-0 border-2 border-purple-400 rounded-xl" 
-			style={{ 
-			WebkitMaskImage: maskImage,
-			maskImage: maskImage 
-			}}
-			ref={border}
+				className="absolute inset-0 border-2 border-purple-400 rounded-xl" 
+				style={{ 
+				WebkitMaskImage: maskImage,
+				maskImage: maskImage 
+				}}
+				ref={border}
 			>
       </motion.div>
       

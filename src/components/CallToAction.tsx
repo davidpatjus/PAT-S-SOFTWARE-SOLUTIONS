@@ -18,11 +18,11 @@ export const CallToAction = () => {
     scrollYProgress.on('change', (value) => console.log('value', value));
   }, [scrollYProgress]);
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [40, -40])
+  const translateY = useTransform(scrollYProgress, [0, 1], [80, -80])
 
   return (
     <div className="bg-black text-white py-[72px] sm:py-24 text-center overflow-x-clip" ref={containerRef}>
-      <div className="container max-w-lg relative">
+      <div className="container max-w-2xl relative">
 
         <motion.div
           style={{ translateY }}
@@ -44,17 +44,30 @@ export const CallToAction = () => {
         />
         </motion.div>
 
-        <h2 className="font-bold text-5xl tracking-tighter sm:text-6xl ">
-          Get instant access
+        <h2 className="font-bold text-5xl tracking-tighter sm:text-6xl mt-4">
+          Accede a tu software profesional hoy mismo
         </h2>
         
         <p className="text-xl text-white/70 mt-5">
-          Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts. 
+          Descubre cómo un <span className='text-purple-600'> software personalizado </span> puede hacer crecer tu negocio y captar más clientes. Déjanos ayudarte a construir tu presencia online con un diseño profesional y funcional. 
         </p>
         
         <form className="mt-10 flex flex-col gap-2.5 max-w-sm mx-auto sm:flex-row">
-          <input type="email" placeholder="your@email.com" className="h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] sm:flex-1" />
-          <button className="bg-white text-black h-12 rounded-lg px-5">Get access</button>
+          <label htmlFor="email" className="sr-only">Correo electrónico</label>
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="your@email.com" 
+            className="h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] sm:flex-1" 
+            required
+            aria-invalid="false"
+          />
+          <button 
+            type="submit" 
+            className="bg-white text-black h-12 rounded-lg px-5"
+          >
+            Get access
+          </button>
         </form>
       
       </div>

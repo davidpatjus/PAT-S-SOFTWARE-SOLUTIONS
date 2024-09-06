@@ -70,8 +70,8 @@ export const Features = () => {
           Todo lo que necesitas
         </h2>
         
-        <div className="max-w-xl mx-auto">
-          <p className="text-center mt-5 text-xl text-white/70">
+        <div className="max-w-xl xl:max-w-3xl mx-auto">
+          <p className="text-center mt-5 text-xl md:text-2xl xl:text-3xl text-white/70">
             Escoge el plan que mejor se adapte a las necesidades de tu negocio, desde una landing page básica hasta soluciones completamente personalizadas.
           </p>
         </div>

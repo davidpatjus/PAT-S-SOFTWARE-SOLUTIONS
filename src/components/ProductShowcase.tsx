@@ -16,7 +16,7 @@ export const ProductShowcase = () => {
   const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0])
   const opacity = useTransform(scrollYProgress, [0, 1], [.5, 1])
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
 
@@ -25,15 +25,16 @@ export const ProductShowcase = () => {
       <div className="container">
         
       <motion.h2
-        className="text-center text-5xl sm:text-6xl font-bold tracking-tighter"
+        className="text-center text-6xl sm:text-7xl font-bold tracking-tighter"
         style={{ opacity: titleOpacity }}
       >
-        Interfaz Inteligente y Adaptable
+        Diseños Modernos y Inteligentes
       </motion.h2>
         
-        <div className="max-w-xl mx-auto">
-          <p className="text-xl text-center text-white/70 mt-5">
-          Controla fácilmente cada aspecto de tu sitio web con una plataforma intuitiva que se adapta a tus necesidades. Simplifica procesos complejos y enfócate en lo que realmente importa: hacer crecer tu negocio.          </p>
+        <div className="max-w-xl xl:max-w-5xl mx-auto">
+          <p className="text-xl md:text-2xl xl:text-3xl text-center text-white/70 mt-5 xl:mt-10">
+          Dale vida a tus ideas con una <span className="text-purple-500"> interfaz diseñada para potenciar tu negocio.</span> Desde la personalización hasta la optimización, nuestra plataforma hace que crear y gestionar tu presencia digital sea fácil y eficiente.          
+          </p>
         </div>
       
         <motion.div
