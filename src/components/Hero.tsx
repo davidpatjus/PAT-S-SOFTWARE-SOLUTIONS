@@ -8,7 +8,7 @@ import "./gradients.css";
 
 export const Hero = () => {
   return (
-    <div className="bg-black text-white custom-bg-gradient py-[72px] sm:py-24 xl:py-36 relative overflow-clip">
+    <div className="bg-black text-white custom-bg-gradient py-[72px] sm:py-24 xl:py-36 relative overflow-clip overflow-x-hidden">
       <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] circle-gradient top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
         <div className="container relative">
 

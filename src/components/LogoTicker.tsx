@@ -52,7 +52,7 @@ export const LogoTicker = () => {
                 repeat: Infinity,
               },
             })}  // Reiniciar la animación cuando se sale del hover
-            className="flex gap-16 md:gap-20 xl:gap-24 flex-none pr-16"
+            className="flex gap-10 md:gap-20 xl:gap-24 flex-none pr-16"
           >
                 {services.map((service, index) => (
                   <div key={index} className="flex-none text-center service-card" aria-label={service.text}>
