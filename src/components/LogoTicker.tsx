@@ -35,7 +35,7 @@ export const LogoTicker = () => {
   }, [controls]);
 
   return (
-    <div id="Services" className="bg-black text-white py-[72px] sm:py-24">
+    <div id="Services" className="bg-black text-white py-[50px] sm:py-24">
       <div className="container">
         <h2 className="text-xl md:text-2xl xl:text-4xl text-center text-white/70">
           Servicios que ofrecemos para maximizar tu éxito
@@ -61,7 +61,7 @@ export const LogoTicker = () => {
                       alt={service.alt}
                       width={200}
                       height={200}
-                      className="flex-none h-12 w-auto mx-auto sm:h-20 xl:h-28 invert py-1"
+                      className="flex-none h-16 w-auto mx-auto sm:h-24 xl:h-28 invert py-1"
                     />
                     <p className="mt-4 text-sm md:text-lg xl:text-xl text-white/80">{service.text}</p>
                   </div>
@@ -73,7 +73,7 @@ export const LogoTicker = () => {
                       alt={service.alt}
                       width={200}
                       height={200}
-                      className="flex-none h-12 w-auto mx-auto sm:h-20 xl:h-28 invert py-1"
+                      className="flex-none h-16 w-auto mx-auto sm:h-24 xl:h-28 invert py-1"
                     />
                     <p className="mt-4 text-sm md:text-lg xl:text-xl text-white/80">{service.text}</p>
                   </div>
