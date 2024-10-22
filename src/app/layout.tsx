@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://pats-software-solutions.vercel.app/" />
         <meta property="og:title" content="PAT'S Software Solutions - Desarrollo Web y Aplicaciones Freelance" />
         <meta property="og:description" content="Desarrollador freelance especializado en soluciones Full-Stack con Angular, React, Next.js y más. Proyectos personalizados para tu negocio." />
-        <meta property="og:image" content="./ogimg.png" />
+        <meta property="og:image" content="/ogimg.png" />
         <meta property="og:url" content="https://pats-software-solutions.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
